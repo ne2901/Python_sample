@@ -1,0 +1,91 @@
+{% extends 'admintest/base.html' %}
+{% load staticfiles %}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{% block main %}
+
+<div id="head">
+    <div class="container">
+        <div class="heading-text">
+            <a href=""><img src="{% static 'rEcScorE/images/logorec.png'%}" width="300" align="center"></a>
+            <!--<h1 class="animated flipInY delay1">rEc$corE</h1>-->
+            <a href="accounts/sign_up/" target="_self">
+            <button type="button" class="infos-button1">Track yourself</button>
+            </a>
+        </div>
+
+        <div class="fluid_container">
+            <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                <div data-thumb="{% static 'rEcScorE/images/slides/thumbs/img1.jpg'%}" data-src="{% static 'rEcScorE/images/slides/img2.jpg'%}">
+                    <h2>We develop.</h2>
+                </div>
+                <div data-thumb="{% static 'rEcScorE/images/slides/thumbs/img5.jpg'%}" data-src="{% static 'rEcScorE/images/slides/img5.jpg'%}">
+                </div>
+                <div data-thumb="{% static 'rEcScorE/images/slides/thumbs/my team.jpg'%}" data-src="{% static 'rEcScorE/images/slides/my team.jpg'%}">
+                </div>
+            </div>
+            <!-- #camera_wrap_3 -->
+        </div>
+        <!-- .fluid_container -->
+    </div>
+</div>
+<!-- /Header -->
+<section class="main-contents">
+    <h1 style="text-align:center;font-size:50px;background-color:#000000">Register Yourself Through your Employer<br>Track your
+        performance.</h1>
+     <canvas id="myCanvas"style="align-content: flex-start; width:1190px; height:500px"></canvas>
+    <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script type="text/javascript" src="{% static 'rEcScorE/js/bounce.js'%}"></script>
+    <h1 style="text-align:center;font-size:50px;background-color:#000000">Manage Hired/To be Hired Candidates<br>Keep All Your Web-Accounts at one Place</h1>
+{##}
+{#           <canvas class="container" id="myCanvas" style="align-content: flex-start; width:1190px; height:500px">#}
+{##}
+{#         </canvas>#}
+{##}
+</section>
+
+<section class="call-to-action text-center">#}
+    <div class="text-all">
+        <h2 style="text-align:center;font-size:50px;Color:brown">Inhance RECRUITMENT SKILLS </h2><br><br><br><br>
+        <h3 style="text-align:center;font-size:30px;color:black">Make sure you recruit the Quality professionals.</h3>
+
+        <a href='app/flow/' target="_self">
+        <button style="position:relative" class="infos-button">Check How?</button>
+        </a>
+    </div>
+</section>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+{#<script src="{% static 'rEcScorE/js/modernizr-latest.js'%}"></script>#}
+{#<script type='text/javascript' src='{% static 'rEcScorE/js/jquery.min.js'%}'></script>#}
+{#<script type='text/javascript' src='{% static 'rEcScorE/js/jquery.mobile.customized.min.js'%}'></script>#}
+{#<script type='text/javascript' src='{% static 'rEcScorE/js/jquery.easing.1.3.js'%}'></script>#}
+{#<script type='text/javascript' src='{% static 'rEcScorE/js/camera.min.js'%}'></script>#}
+{#<script src="{% static 'rEcScorE/js/bootstrap.min.js'%}"></script>#}
+
+<script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_4').camera({
+                transPeriod: 800,
+                time: 3000,
+				height: '600',
+				loader: 'false',
+				pagination: true,
+				thumbnails: false,
+				hover: false,
+                playPause: false,
+                navigation: false,
+				opacityOnGrid: false,
+				imagePath: 'rEcScorE/images/'
+			});
+
+		});
+
+
+</script>
+    </body>
+{% endblock %}
+{#</body>#}
+{#</html>#}
